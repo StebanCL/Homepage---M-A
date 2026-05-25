@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda | M&A Barber Shop</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/css/agenda.css">
+  <link rel="icon" type="image/jpeg" href="/img/logo.jpeg">
+</head>
+
+<body>
+
+  <main class="agenda-page">
+
+    <div class="container">
+      <div class="row min-vh-100 align-items-center g-5">
+
+        <div class="col-lg-5">
+          <a href="/index.html" class="volver">
+            <i class="bi bi-arrow-left"></i> Volver al inicio
+          </a>
+
+          <p class="etiqueta mt-4">Agenda online</p>
+          <h1>Reserva tu cita sin hacer fila</h1>
+          <p>
+            Selecciona el servicio, elige la fecha y envía tu solicitud. En M&A Barber Shop buscamos que tu experiencia sea más rápida, cómoda y organizada.
+          </p>
+
+          <div class="info-box">
+            <h5><i class="bi bi-clock"></i> Horario de atención</h5>
+            <p>Lunes a sábado: 8:00 a.m. - 7:00 p.m.</p>
+          </div>
+
+          <div class="info-box">
+            <h5><i class="bi bi-geo-alt"></i> Ubicación</h5>
+            <p>Carrera 27 #5a 09 Bogotá</p>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="form-card">
+            <div class="text-center mb-4">
+              <img src="/img/logo.jpeg" alt="Logo M&A" class="logo-form">
+              <h2>Agenda tu cita</h2>
+            </div>
+
+            <form>
+              <div class="row g-3">
+
+                <div class="col-md-6">
+                  <label class="form-label">Nombre completo</label>
+                  <input type="text" class="form-control" placeholder="Ej: Juan Pérez">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Teléfono</label>
+                  <input type="tel" class="form-control" placeholder="Ej: 300 123 4567">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Servicio</label>
+                  <select class="form-select">
+                    <option selected>Selecciona una opción</option>
+                    <option>Corte clásico</option>
+                    <option>Barba</option>
+                    <option>Corte + barba</option>
+                    <option>Servicio premium</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Fecha</label>
+                  <input type="date" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Hora</label>
+                  <input type="time" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Barbero</label>
+                  <select class="form-select">
+                    <option selected>Sin preferencia</option>
+                    <option>Barbero 1</option>
+                    <option>Barbero 2</option>
+                    <option>Barbero 3</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Observaciones</label>
+                  <textarea class="form-control" rows="3" placeholder="Ej: Quiero un corte bajo, con barba perfilada"></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-dorado mt-3">
+                    Enviar solicitud
+                  </button>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>

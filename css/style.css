@@ -241,3 +241,76 @@ h4 {
     margin-top: 20px;
   }
 }
+
+/*FOOTER*/
+/* 1. Variables de color necesarias */
+:root {
+    --mya-gold-light: #FFD43E;
+    --mya-gold: #FFC600;
+    --mya-gold-dark: #BF930D;
+    --mya-white: #FFFFFF;
+}
+
+/* 2. Tipografía para el título "Datos De Contacto" */
+.font-elegante {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* 3. Estructura del contenedor de datos (el área oscura antes del footer) */
+.background-datos-inferior {
+    background-color: rgba(20, 20, 20, 0.4);
+    border-radius: 8px 8px 0 0;
+}
+
+/* 4. Estilos de texto y utilidades de la sección de datos */
+.small-title-datos {
+    font-size: 0.85rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.x-small-text {
+    font-size: 0.75rem !important;
+    line-height: 1.5;
+    opacity: 0.95;
+}
+
+.fs-mini {
+    font-size: 0.68rem !important;
+    display: block;
+    margin-top: 2px;
+}
+
+/* 5. Columna personalizada de 5 espacios (20% cada una) */
+@media (min-width: 992px) {
+    .col-lg-2-5 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+/* 6. El Footer final (franja inferior) */
+.footer-mya {
+    background-color: #1a1a1a;
+    border-top: 1px solid rgba(255, 198, 0, 0.1); /* Línea dorada sutil */
+    width: 100%;
+}
+
+/* 7. Interacciones de enlaces en el footer */
+.mya-link-hover {
+    transition: color 0.2s ease;
+}
+
+.mya-link-hover:hover {
+    color: var(--mya-white) !important;
+}
+
+/* 8. Ajuste para que el footer siempre esté al fondo si hay poco contenido */
+#page-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}

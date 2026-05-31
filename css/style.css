@@ -165,7 +165,8 @@ h1, h2, h3, h4 {
 .barbers-track {
     display: flex;
     gap: 24px;
-    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    /* Esto es vital para que las cartas se mantengan en una sola fila */
+    flex-wrap: nowrap; 
 }
 
 /* CARD */
@@ -416,4 +417,232 @@ h1, h2, h3, h4 {
     position: static;
     margin-top: 20px;
   }
+}
+
+/* Asegurar que la campanita tenga el estilo correcto */
+.bi-bell-fill {
+    font-size: 1.2rem;
+    color: var(--dorado);
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    background-color: var(--negro);
+    border: 1px solid var(--dorado);
+}
+
+.dropdown-item {
+    color: var(--blanco);
+}
+
+.dropdown-item:hover {
+    background-color: var(--gris-oscuro);
+}
+
+/* Menú lateral (Escritorio) */
+#side-menu {
+    position: fixed; top: 0; left: -300px; width: 300px; height: 100%;
+    background-color: #333; transition: 0.3s; z-index: 1050; padding: 20px; color: white;
+}
+#side-menu.active { left: 0; }
+
+/* Ocultar en móvil para que se muestren en el menú colapsado */
+@media (max-width: 991px) {
+    #side-menu { display: none !important; }
+}
+/* Menu Lateral */
+#side-menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    /* Gradiente oscuro que combina con tu barbería */
+    background: linear-gradient(180deg, #1a1a1a 0%, #000000 100%);
+    border-right: 2px solid #FFC600;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+    transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 2000;
+}
+
+#side-menu.active { left: 0; }
+
+.menu-header {
+    padding: 30px;
+    border-bottom: 1px solid rgba(255, 198, 0, 0.2);
+    text-align: center;
+}
+
+.menu-items {
+    padding: 20px;
+}
+
+.menu-items a {
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.menu-items a:hover {
+    background-color: rgba(255, 198, 0, 0.1);
+    color: #FFC600;
+    padding-left: 30px;
+}
+
+/* Capa oscura (Overlay) */
+#menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Oscuro transparente */
+    z-index: 1500;
+    display: none; /* Oculto por defecto */
+}
+
+/* Botón de cierre (X) */
+.close-menu-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #FFC600;
+    cursor: pointer;
+}
+
+/* Contacto */
+/* Contenedor elegante */
+.mya-contact-section {
+    position: relative;
+    background: #050505;
+}
+
+.mya-contact-card {
+    background: linear-gradient(145deg, #0f0f0f, #000000);
+    border: 1px solid #2a2a2a;
+    padding: 3.5rem; /* Aumentamos el padding para hacerlo más grande */
+    border-radius: 20px;
+    min-height: 400px; /* Asegura altura mínima para presencia */
+    transition: all 0.4s ease;
+}
+
+.map-frame iframe {
+    border-radius: 10px;
+    filter: none !important; 
+}
+
+/* Efecto de borde dorado al pasar el mouse */
+.mya-contact-card:hover {
+    border-color: var(--mya-gold);
+    box-shadow: 0 0 20px rgba(255, 198, 0, 0.1);
+}
+
+/* Títulos con estilo */
+.contact-label {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--mya-gold);
+    margin-bottom: 1.5rem !important;
+}
+
+/* Estilo para los iconos */
+.icon-box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 198, 0, 0.1);
+    border-radius: 50%;
+    margin-right: 15px;
+    color: var(--mya-gold);
+}
+
+
+@media (min-width: 992px) {
+    .d-lg-none {
+        display: none !important;
+    }
+}
+
+@media (max-width: 991px) {
+    /* Asegura el despliegue correcto del auth-links si se requiere al cerrar sesión */
+    #auth-links {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+}
+
+/* Asegurar que las opciones de configuración en móvil estén centradas y en columna */
+#mobile-extra-options {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100%;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 198, 0, 0.2);
+}
+
+#mobile-extra-options .nav-link {
+    font-size: 1.1rem;
+    padding: 10px 0 !important;
+}
+
+/* Esto asegura que la marca siempre se comporte igual */
+#brand-area {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 50px; 
+}
+
+/* Forzar que el icono de la rueda no aparezca en móvil bajo ninguna circunstancia */
+@media (max-width: 991px) {
+    #gear-icon { display: none !important; }
+}
+
+/* Contenedor dinámico (Nombre + Campana) */
+#dynamic-nav-area {
+    display: flex;
+    align-items: center;
+}
+
+/* En móvil, ocultamos el nombre del usuario (solo dejamos campana) */
+@media (max-width: 991px) {
+    .user-welcome-text { display: none !important; }
+}
+
+/* En escritorio, aseguramos que el nombre y campana estén a la derecha */
+@media (min-width: 992px) {
+    #dynamic-nav-area { margin-left: auto; }
+    #mobile-bell-container { display: none !important; }
+}
+
+/* Fuerza la ocultación absoluta si no tiene la clase adecuada */
+#gear-icon-desktop.d-none {
+    display: none !important;
+}
+
+#auth-links.d-none {
+    display: none !important;
+}
+
+/* Asegura que d-none oculte completamente */
+.d-none {
+    display: none !important;
+}
+
+/* Fuerza el diseño de fila para el contenedor de botones de auth en escritorio */
+@media (min-width: 992px) {
+    #auth-links {
+        display: flex !important; /* Fuerza la fila en escritorio */
+        flex-direction: row !important;
+    }
 }

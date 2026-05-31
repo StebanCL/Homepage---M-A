@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-dark py-3 fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#" id="brand-area">
+        <i class="bi bi-gear text-white me-2 d-none d-lg-inline" id="gear-icon-desktop" style="font-size:1.5rem; cursor:pointer;" onclick="toggleSideMenu(event)"></i>
+        
+        <div id="logo-container" class="d-flex align-items-center">
+            <img src="/img/logo.jpeg" alt="Logo M&A" class="logo me-2" style="width: 40px; height: 40px; border-radius: 50%;">
+            <span>M&A Barber Shop</span>
+        </div>
+    </a>
+
+    <div class="d-flex align-items-center ms-auto">
+        <div id="mobile-bell-container" class="me-3"></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav align-items-center ms-auto" id="nav-user-area">
+        <li class="nav-item"><a class="nav-link" href="/index.html#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="/index.html#barberos">Barberos</a></li>
+        <li class="nav-item"><a class="nav-link" href="/index.html#marca">Marca</a></li>
+        <li class="nav-item"><a class="nav-link" href="/secciones/agenda.html">Agendar</a></li>
+        
+        <li id="dynamic-nav-area" class="d-flex align-items-center"></li>
+
+        <li class="nav-item" id="auth-links">
+            <a class="nav-link" href="/secciones/iniciarsesion.html">Iniciar sesión</a>
+            <a class="nav-link" href="/secciones/registrarse.html">Registrarse</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav text-center d-lg-none" id="mobile-extra-options"></ul>
+    </div>
+  </div>
+</nav>

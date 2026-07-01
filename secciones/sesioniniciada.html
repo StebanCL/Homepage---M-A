@@ -22,7 +22,7 @@
     <script>
         // Al cargar, inyectamos info.html en main-content
         document.addEventListener("DOMContentLoaded", () => {
-            fetch('/componentes/navbar.html')
+            fetch('componentes/navbar.html')
                 .then(res => res.text())
                 .then(html => {
                     document.getElementById('navbar-container').innerHTML = html;

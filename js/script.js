@@ -26,9 +26,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     // Carga de componentes necesarios
-    if (document.getElementById('navbar-container')) cargarComponente('navbar-container', '/componentes/navbar.html');
-    if (document.getElementById('footer-container')) cargarComponente('footer-container', '/componentes/footer.html');
-    if (document.getElementById('main-content')) cargarComponente('main-content', '/secciones/info.html');
+    if (document.getElementById('navbar-container')) cargarComponente('navbar-container', 'componentes/navbar.html');
+    if (document.getElementById('footer-container')) cargarComponente('footer-container', 'componentes/footer.html');
+    if (document.getElementById('main-content')) cargarComponente('main-content', 'secciones/info.html');
 
     // --- 2. INICIALIZAR OTROS ELEMENTOS ---
     if (document.querySelector('.barbers-track')) inicializarCarousel();
